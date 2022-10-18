@@ -1,192 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ankademin Quiz</title>
     <script src="main.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="header-wrapper">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content-wrapper">
+      <div class="header-wrapper">
         <h1>Ankademin Quiz</h1>
 
-        <input type="checkbox" name="darkMode" id="darkMode" class="changeMode">
-        <label for="darkMode">Dark Mode</label>
+        <div class="input-wrapper">
+          <input
+            type="checkbox"
+            name="darkMode"
+            id="darkMode"
+            class="changeMode"
+          />
+          <label for="darkMode">Dark Mode</label>
+        </div>
+      </div>
+      <div class="all-questions-wrapper">
+        <!--Question 1-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question">1. Ankademin is located in Berlin.</strong>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="locationAnswer"
+              class="radio-button"
+              id="locationTrue"
+              value="false"
+            />
+            <label for="locationTrue">Right</label>
+          </div>
 
-    </div>
-
-    <!--Question 1-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">1. Ankademin is located in Berlin</strong>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="locationAnswer"
+              class="radio-button"
+              id="locationFalse"
+              value="correct"
+            />
+            <label for="locationFalse">Wrong</label>
+          </div>
         </div>
 
-        <input type="radio" name="locationAnswer" class="radio-button" id="locationTrue" value="false">
-        <label for="locationTrue">True</label>
+        <!--Question 2-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question">2. Apples are purple.</strong>
+          </div>
 
-        <input type="radio" name="locationAnswer" class="radio-button" id="locationFalse" value="correct">
-        <label for="locationFalse">False</label>
-    </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="appleAnswer"
+              class="radio-button"
+              id="appleTrue"
+              value="false"
+            />
+            <label for="appleTrue">Right</label>
+          </div>
 
-    <!--Question 2-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">2. Apples are purple</strong>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="appleAnswer"
+              class="radio-button"
+              id="appleFalse"
+              value="correct"
+            />
+            <label for="appleFalse">Wrong</label>
+          </div>
         </div>
 
-        <input type="radio" name="appleAnswer" class="radio-button" id="appleTrue" value="false">
-        <label for="appleTrue">True</label>
-
-        <input type="radio" name="appleAnswer" class="radio-button" id="appleFalse"value="correct">
-        <label for="appleFalse">False</label>
-    </div>
-
-    <!--Question 3-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
+        <!--Question 3-->
+        <div class="question-wrapper">
+          <div class="question-text">
             <strong class="question">3. Who created JavaScript?</strong>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="javascriptAnswer"
+              class="radio-button"
+              id="javaElon"
+              value="Elon"
+            />
+            <label for="javaElon">Elon Musk</label>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="javascriptAnswer"
+              class="radio-button"
+              id="javaBrandon"
+              value="brandon"
+            />
+            <label for="javaBrandon">Brandon Duarte Tsegai</label>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="javascriptAnswer"
+              class="radio-button"
+              id="javaCorrect"
+              value="correct"
+            />
+            <label for="javaCorrect">Brendan Eich</label>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="javascriptAnswer"
+              class="radio-button"
+              id="javaLeich"
+              value="Leich"
+            />
+            <label for="javaLeich">Brendan Leich</label>
+          </div>
         </div>
 
-        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaElon" value="Elon">
-        <label for="javaElon">Elon Musk</label>
+        <!--Question 4-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question">4. Who created HTML?</strong>
+          </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="htmlAnswer"
+              class="radio-button"
+              id="htmlDeZeeuw"
+              value="false"
+            />
+            <label for="htmlDeZeeuw">Tim de Zeeuw</label>
+          </div>
 
-        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaBrandon" value="brandon">
-        <label for="javaBrandon">Brandon Duarte Tsegai</label>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="htmlAnswer"
+              class="radio-button"
+              id="htmlCorrect"
+              value="correct"
+            />
+            <label for="htmlCorrect">Tim Berners-Lee</label>
+          </div>
 
-        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaCorrect" value="correct">
-        <label for="javaCorrect">Brendan Eich</label>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="htmlAnswer"
+              class="radio-button"
+              id="htmlHarford"
+              value="false"
+            />
+            <label for="htmlHarford">Tim Harford</label>
+          </div>
 
-        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaLeich" value="Leich">
-        <label for="javaLeich">Brendan Leich</label>
-    </div>
-
-    <!--Question 4-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">4. Who created HTML</strong>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="htmlAnswer"
+              class="radio-button"
+              id="htmlCook"
+              value="false"
+            />
+            <label for="htmlCook">Tim Cook</label>
+          </div>
         </div>
 
-        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlDeZeeuw" value="false">
-        <label for="htmlDeZeeuw">Tim de Zeeuw</label>
+        <!--Question 5-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question"
+              >5. Which ones are berries? (Multiple choice)</strong
+            >
+          </div>
 
-        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlCorrect" value="correct">
-        <label for="htmlCorrect">Tim Berners-Lee</label>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="berryAnswer"
+              class="checkbox-button"
+              id="berryPumpkin"
+              value="correct"
+            />
+            <label for="berryPumpkin">Pumpkin</label>
+          </div>
 
-        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlHarford" value="false">
-        <label for="htmlHarford">Tim Harford</label>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="berryAnswer"
+              class="checkbox-button"
+              id="berryTomato"
+              value="correct"
+            />
+            <label for="berryTomato">Tomato</label>
+          </div>
 
-        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlCook" value="false">
-        <label for="htmlCook">Tim Cook</label>
-    </div>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="berryAnswer"
+              class="checkbox-button"
+              id="berryAvocado"
+              value="correct"
+            />
+            <label for="berryAvocado">Avocado</label>
+          </div>
 
-    <!--Question 5-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">5. Which ones are berries? (Multiple choice)</strong>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="berryAnswer"
+              class="checkbox-button"
+              id="berryApple"
+              value="false"
+            />
+            <label for="berryApple">Apple</label>
+          </div>
         </div>
 
-        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryPumpkin" value="correct">
-        <label for="berryPumpkin">Pumpkin</label>
+        <!--Question 6-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question"
+              >6. Which ones are fruits? (Multiple choice)</strong
+            >
+          </div>
 
-        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryTomato" value="correct">
-        <label for="berryTomato">Tomato</label>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="fruitAnswer"
+              class="checkbox-button"
+              id="fruitEggplant"
+              value="correct"
+            />
+            <label for="fruitEggplant">Eggplant</label>
+          </div>
 
-        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryAvocado" value="correct">
-        <label for="berryAvocado">Avocado</label>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="fruitAnswer"
+              class="checkbox-button"
+              id="fruitSquash"
+              value="correct"
+            />
+            <label for="fruitSquash">Squash</label>
+          </div>
 
-        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryApple" value="false">
-        <label for="berryApple">Apple</label>
-    </div>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="fruitAnswer"
+              class="checkbox-button"
+              id="fruitPotato"
+              value="false"
+            />
+            <label for="fruitPotato">potato</label>
+          </div>
 
-    <!--Question 6-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">6. Which ones are fruits? (Multiple choice)</strong>
+          <div class="input-wrapper">
+            <input
+              type="checkbox"
+              name="fruitAnswer"
+              class="checkbox-button"
+              id="fruitMusk"
+              value="false"
+            />
+            <label for="fruitMusk">Elon Musk</label>
+          </div>
         </div>
 
-        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitEggplant" value="correct">
-        <label for="fruitEggplant">Eggplant</label>
+        <!--Question 7-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question">7. Elon Musk is a perfume brand.</strong>
+          </div>
 
-        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitSquash" value="correct">
-        <label for="fruitSquash">Squash</label>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="muskAnswer"
+              class="radio-button"
+              id="muskTrue"
+              value="false"
+            />
+            <label for="muskTrue">Right</label>
+          </div>
 
-        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitPotato" value="false">
-        <label for="fruitPotato">potato</label>
-
-        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitMusk" value="false">
-        <label for="fruitMusk">Elon Musk</label>
-    </div>
-
-    <!--Question 7-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">7. Elon Musk is a perfume brand</strong>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="muskAnswer"
+              class="radio-button"
+              id="muskFalse"
+              value="correct"
+            />
+            <label for="muskFalse">Wrong</label>
+          </div>
         </div>
 
-        <input type="radio" name="muskAnswer" class="radio-button" id="muskTrue" value="false">
-        <label for="muskTrue">True</label>
+        <!--Question 8-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question"
+              >8. Australia is wider than the moon.</strong
+            >
+          </div>
 
-        <input type="radio" name="muskAnswer" class="radio-button" id="muskFalse" value="correct">
-        <label for="muskFalse">False</label>
-    </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="moonAnswer"
+              class="radio-button"
+              id="moonTrue"
+              value="correct"
+            />
+            <label for="moonTrue">Right</label>
+          </div>
 
-    <!--Question 8-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">8. Australia is wider than the moon</strong>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="moonAnswer"
+              class="radio-button"
+              id="moonFalse"
+              value="false"
+            />
+            <label for="moonFalse">Wrong</label>
+          </div>
         </div>
 
-        <input type="radio" name="moonAnswer" class="radio-button" id="moonTrue" value="correct">
-        <label for="moonTrue">True</label>
+        <!--Question 9-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question"
+              >9. Hot and cold water sound the same when poured.</strong
+            >
+          </div>
 
-        <input type="radio" name="moonAnswer" class="radio-button" id="moonFalse" value="false">
-        <label for="moonFalse">False</label>
-    </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="waterAnswer"
+              class="radio-button"
+              id="waterTrue"
+              value="false"
+            />
+            <label for="waterTrue">Right</label>
+          </div>
 
-    <!--Question 9-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">9. Hot and cold water sound the same when poured.</strong>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="waterAnswer"
+              class="radio-button"
+              id="waterFalse"
+              value="correct"
+            />
+            <label for="waterFalse">Wrong</label>
+          </div>
         </div>
 
-        <input type="radio" name="waterAnswer" class="radio-button" id="waterTrue" value="false">
-        <label for="waterTrue">True</label>
+        <!--Question 10-->
+        <div class="question-wrapper">
+          <div class="question-text">
+            <strong class="question"
+              >10. In the English language there is no word that rhymes with
+              orange.</strong
+            >
+          </div>
 
-        <input type="radio" name="waterAnswer" class="radio-button" id="waterFalse" value="correct">
-        <label for="waterFalse">False</label>
-    </div>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="languageAnswer"
+              class="radio-button"
+              id="languageTrue"
+              value="correct"
+            />
+            <label for="languageTrue">Right</label>
+          </div>
 
-    <!--Question 10-->
-    <div class="question-wrapper">
-
-        <div class="question-text">
-            <strong class="question">10. In the English language there is no word that rhymes with orange.</strong>
+          <div class="input-wrapper">
+            <input
+              type="radio"
+              name="languageAnswer"
+              class="radio-button"
+              id="languageFalse"
+              value="false"
+            />
+            <label for="languageFalse">Wrong</label>
+          </div>
         </div>
+      </div>
 
-        <input type="radio" name="languageAnswer" class="radio-button" id="languageTrue" value="correct">
-        <label for="languageTrue">True</label>
+      <p id="correctAnswers"></p>
 
-        <input type="radio" name="languageAnswer" class="radio-button" id="languageFalse" value="false">
-        <label for="languageFalse">False</label>
+      <!--<input type="submit" value="Hand in" id="submitBtn">-->
+      <button id="submitBtn">Hand IN</button>
     </div>
-
-    <p id="correctAnswers"></p>
-
-    <!--<input type="submit" value="Hand in" id="submitBtn">-->
-    <button id="submitBtn">Hand IN</button>
-
-
-    
-</body>
+  </body>
 </html>
