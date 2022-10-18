@@ -15,29 +15,41 @@ if(darkMode){
 
 function correctAnswers(){
     let totalScore = 0;
-    let maxPoints = 10;
+    let maxPoints = 13;
     let p = document.querySelector("#correctAnswers");
-    let allAnswers = document.querySelectorAll(".answer-button");
+    let allRadioAnswers = document.querySelectorAll(".radio-button");
+    let allCheckboxAnswers = document.querySelectorAll(".checkbox-button");
 
-    allAnswers.forEach(q => {
-        if(q.checked && q.value === "correct"){
+    allRadioAnswers.forEach(input => {
+        if(input.checked && input.value === "correct"){
             totalScore++;
-            q.style.color = "green";
-            console.log(q);
-        }else{
-            q.style.color = "red";
+            input.parentNode.firstElementChild.style.color = "green";
+        }
+        else if(input.checked && input.value !== "correct"){
+            input.parentNode.firstElementChild.style.color = "red";
         }
     });
 
+    allCheckboxAnswers.forEach(input => {
+        if(input.checked && input.value === "correct"){
+            totalScore++;
+            input.parentNode.firstElementChild.style.color = "green";
+        }
+        else if(input.checked && input.value !== "correct"){
+            totalScore--;
+            input.parentNode.firstElementChild.style.color = "red";
+        }
+    })
+
     if(totalScore > maxPoints * 0.75){
         p.style.color = "green";
-        p.innerText = `You got ${totalScore}/10. You did really really good!`;
+        p.innerText = `You got ${totalScore}/${maxPoints}. You did really really good!`;
     }else if(totalScore > maxPoints * .5){
         p.style.color = "orange";
-        p.innerText = `You got ${totalScore}/10. You did alright!`;
+        p.innerText = `You got ${totalScore}/${maxPoints}. You did alright!`;
     }else{
         p.style.color = "red";
-        p.innerText = `You got ${totalScore}/10. You failed.`;
+        p.innerText = `You got ${totalScore}/${maxPoints}. You failed.`;
     }
 
     console.log(totalScore);
