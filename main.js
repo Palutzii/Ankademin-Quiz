@@ -1,25 +1,28 @@
 let allQuestionWrappers = document.querySelectorAll(".question-wrapper");
 let darkMode = document.querySelector("input[name='darkMode']");
+let darkModeLabel = document.querySelector("#modeLabel");
 
-// If darkMode exsists do this please
+// If darkMode exsists, change background color,text color, button color and border color.
 if (darkMode) {
   darkMode.addEventListener("change", (e) => {
     if (darkMode.checked) {
       document.body.style.background = "#202124";
       document.body.style.color = "#fff";
+      document.querySelector("#submitBtn").style.background = "#fff";
+      document.querySelector("#submitBtn").style.color = "#000";
+      darkModeLabel.innerHTML = "Light Mode &#127774;";
       allQuestionWrappers.forEach((i) => {
         i.style.borderColor = "#fff";
       });
-      document.querySelector("#submitBtn").style.background = "#fff";
-      document.querySelector("#submitBtn").style.color = "#000";
     } else {
       document.body.style.background = "#fff";
       document.body.style.color = "#000";
+      document.querySelector("#submitBtn").style.background = "#202124";
+      document.querySelector("#submitBtn").style.color = "#fff";
+      darkModeLabel.innerHTML = "Dark Mode &#127769;";
       allQuestionWrappers.forEach((i) => {
         i.style.borderColor = "#202124";
       });
-      document.querySelector("#submitBtn").style.background = "#202124";
-      document.querySelector("#submitBtn").style.color = "#fff";
     }
   });
 }
@@ -34,19 +37,19 @@ function correctAnswers() {
   allRadioAnswers.forEach((input) => {
     if (input.checked && input.value === "correct") {
       totalScore++;
-      input.parentNode.firstElementChild.style.color = "green";
+      input.parentNode.parentNode.style.background = "darkgreen";
     } else if (input.checked && input.value !== "correct") {
-      input.parentNode.firstElementChild.style.color = "red";
+      input.parentNode.parentNode.style.background = "darkred";
     }
   });
 
   allCheckboxAnswers.forEach((input) => {
     if (input.checked && input.value === "correct") {
       totalScore++;
-      input.parentNode.firstElementChild.style.color = "green";
+      input.parentNode.parentNode.style.background = "green";
     } else if (input.checked && input.value !== "correct") {
       totalScore--;
-      input.parentNode.firstElementChild.style.color = "red";
+      input.parentNode.parentNode.style.background = "red";
     }
   });
 
