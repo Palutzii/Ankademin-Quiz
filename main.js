@@ -17,46 +17,17 @@ function correctAnswers(){
     let totalScore = 0;
     let maxPoints = 10;
     let p = document.querySelector("#correctAnswers");
-    
-    if(document.querySelector("#locationFalse").checked){
-        totalScore++;
-    };
+    let allAnswers = document.querySelectorAll(".answer-button");
 
-    if(document.querySelector("#appleFalse").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#bananaTrue").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#earthFalse").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#colorFalse").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#planetFalse").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#muskFalse").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#moonTrue").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#waterFalse").checked){
-        totalScore++;
-    };
-
-    if(document.querySelector("#languageTrue").checked){
-        totalScore++;
-    };
+    allAnswers.forEach(q => {
+        if(q.checked && q.value === "correct"){
+            totalScore++;
+            q.style.color = "green";
+            console.log(q);
+        }else{
+            q.style.color = "red";
+        }
+    });
 
     if(totalScore > maxPoints * 0.75){
         p.style.color = "green";
