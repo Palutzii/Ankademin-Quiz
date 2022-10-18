@@ -21,13 +21,13 @@
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>1. Ankademin is located in Berlin</strong>
+            <strong class="question">1. Ankademin is located in Berlin</strong>
         </div>
 
-        <input type="radio" name="locationAnswer" class="answer-button" id="locationTrue" value="false">
+        <input type="radio" name="locationAnswer" class="radio-button" id="locationTrue" value="false">
         <label for="locationTrue">True</label>
 
-        <input type="radio" name="locationAnswer" class="answer-button" id="locationFalse" value="correct">
+        <input type="radio" name="locationAnswer" class="radio-button" id="locationFalse" value="correct">
         <label for="locationFalse">False</label>
     </div>
 
@@ -35,13 +35,13 @@
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>2. Apples are purple</strong>
+            <strong class="question">2. Apples are purple</strong>
         </div>
 
-        <input type="radio" name="appleAnswer" class="answer-button" id="appleTrue" value="false">
+        <input type="radio" name="appleAnswer" class="radio-button" id="appleTrue" value="false">
         <label for="appleTrue">True</label>
 
-        <input type="radio" name="appleAnswer" class="answer-button" id="appleFalse"value="correct">
+        <input type="radio" name="appleAnswer" class="radio-button" id="appleFalse"value="correct">
         <label for="appleFalse">False</label>
     </div>
 
@@ -49,69 +49,93 @@
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>3. Bananas are yellow</strong>
+            <strong class="question">3. Who created JavaScript?</strong>
         </div>
 
-        <input type="radio" name="bananaAnswer" class="answer-button" id="bananaTrue" value="correct">
-        <label for="bananaTrue">True</label>
+        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaElon" value="Elon">
+        <label for="javaElon">Elon Musk</label>
 
-        <input type="radio" name="bananaAnswer" class="answer-button" id="bananaFalse" value="flase">
-        <label for="bananaFalse">False</label>
+        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaBrandon" value="brandon">
+        <label for="javaBrandon">Brandon Duarte Tsegai</label>
+
+        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaCorrect" value="correct">
+        <label for="javaCorrect">Brendan Eich</label>
+
+        <input type="radio" name="javascriptAnswer" class="radio-button" id="javaLeich" value="Leich">
+        <label for="javaLeich">Brendan Leich</label>
     </div>
 
     <!--Question 4-->
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>4. Earth is triangle</strong>
+            <strong class="question">4. Who created HTML</strong>
         </div>
 
-        <input type="radio" name="earthAnswer" class="answer-button" id="earthTrue" value="false">
-        <label for="earthTrue">True</label>
+        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlDeZeeuw" value="false">
+        <label for="htmlDeZeeuw">Tim de Zeeuw</label>
 
-        <input type="radio" name="earthAnswer" class="answer-button" id="earthFalse" value="correct">
-        <label for="earthFalse">False</label>
+        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlCorrect" value="correct">
+        <label for="htmlCorrect">Tim Berners-Lee</label>
+
+        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlHarford" value="false">
+        <label for="htmlHarford">Tim Harford</label>
+
+        <input type="radio" name="htmlAnswer" class="radio-button" id="htmlCook" value="false">
+        <label for="htmlCook">Tim Cook</label>
     </div>
 
     <!--Question 5-->
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>5. There are no colors but black and white</strong>
+            <strong class="question">5. Which ones are berries? (Multiple choice)</strong>
         </div>
 
-        <input type="radio" name="colorAnswer" class="answer-button" id="colorTrue" value="false">
-        <label for="colorTrue">True</label>
+        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryPumpkin" value="correct">
+        <label for="berryPumpkin">Pumpkin</label>
 
-        <input type="radio" name="colorAnswer" class="answer-button" id="colorFalse" value="correct">
-        <label for="colorFalse">False</label>
+        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryTomato" value="correct">
+        <label for="berryTomato">Tomato</label>
+
+        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryAvocado" value="correct">
+        <label for="berryAvocado">Avocado</label>
+
+        <input type="checkbox" name="berryAnswer" class="checkbox-button" id="berryApple" value="false">
+        <label for="berryApple">Apple</label>
     </div>
 
     <!--Question 6-->
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>6. Is Bluetooth a planet?</strong>
+            <strong class="question">6. Which ones are fruits? (Multiple choice)</strong>
         </div>
 
-        <input type="radio" name="planetAnswer" class="answer-button" id="planetTrue" value="false">
-        <label for="planetTrue">True</label>
+        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitEggplant" value="correct">
+        <label for="fruitEggplant">Eggplant</label>
 
-        <input type="radio" name="planetAnswer" class="answer-button" id="planetFalse" value="correct">
-        <label for="PlanetFalse">False</label>
+        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitSquash" value="correct">
+        <label for="fruitSquash">Squash</label>
+
+        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitPotato" value="false">
+        <label for="fruitPotato">potato</label>
+
+        <input type="checkbox" name="fruitAnswer" class="checkbox-button" id="fruitMusk" value="false">
+        <label for="fruitMusk">Elon Musk</label>
     </div>
 
     <!--Question 7-->
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>7. Elon Musk is a perfume brand</strong>
+            <strong class="question">7. Elon Musk is a perfume brand</strong>
         </div>
 
-        <input type="radio" name="muskAnswer" class="answer-button" id="muskTrue" value="false">
+        <input type="radio" name="muskAnswer" class="radio-button" id="muskTrue" value="false">
         <label for="muskTrue">True</label>
 
-        <input type="radio" name="muskAnswer" class="answer-button" id="muskFalse" value="correct">
+        <input type="radio" name="muskAnswer" class="radio-button" id="muskFalse" value="correct">
         <label for="muskFalse">False</label>
     </div>
 
@@ -119,13 +143,13 @@
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>8. Australia is wider than the moon</strong>
+            <strong class="question">8. Australia is wider than the moon</strong>
         </div>
 
-        <input type="radio" name="moonAnswer" class="answer-button" id="moonTrue" value="correct">
+        <input type="radio" name="moonAnswer" class="radio-button" id="moonTrue" value="correct">
         <label for="moonTrue">True</label>
 
-        <input type="radio" name="moonAnswer" class="answer-button" id="moonFalse" value="false">
+        <input type="radio" name="moonAnswer" class="radio-button" id="moonFalse" value="false">
         <label for="moonFalse">False</label>
     </div>
 
@@ -133,13 +157,13 @@
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>9. Hot and cold water sound the same when poured.</strong>
+            <strong class="question">9. Hot and cold water sound the same when poured.</strong>
         </div>
 
-        <input type="radio" name="waterAnswer" class="answer-button" id="waterTrue" value="false">
+        <input type="radio" name="waterAnswer" class="radio-button" id="waterTrue" value="false">
         <label for="waterTrue">True</label>
 
-        <input type="radio" name="waterAnswer" class="answer-button" id="waterFalse" value="correct">
+        <input type="radio" name="waterAnswer" class="radio-button" id="waterFalse" value="correct">
         <label for="waterFalse">False</label>
     </div>
 
@@ -147,13 +171,13 @@
     <div class="question-wrapper">
 
         <div class="question-text">
-            <strong>10. In the English language there is no word that rhymes with orange.</strong>
+            <strong class="question">10. In the English language there is no word that rhymes with orange.</strong>
         </div>
 
-        <input type="radio" name="languageAnswer" class="answer-button" id="languageTrue" value="correct">
+        <input type="radio" name="languageAnswer" class="radio-button" id="languageTrue" value="correct">
         <label for="languageTrue">True</label>
 
-        <input type="radio" name="languageAnswer" class="answer-button" id="languageFalse" value="false">
+        <input type="radio" name="languageAnswer" class="radio-button" id="languageFalse" value="false">
         <label for="languageFalse">False</label>
     </div>
 
