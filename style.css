@@ -9,9 +9,6 @@ body {
   align-items: center;
 }
 
-.header-wrapper {
-}
-
 .question-wrapper {
   display: flex;
   flex-direction: column;
