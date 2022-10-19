@@ -46,7 +46,7 @@ function correctAnswers() {
   allCheckboxAnswers.forEach((input) => {
     if (input.checked && input.value === "correct") {
       totalScore++;
-      input.parentNode.parentNode.style.background = "green";
+      input.parentNode.parentNode.style.background = "darkgreen";
     } else if (input.checked && input.value !== "correct") {
       totalScore--;
       input.parentNode.parentNode.style.background = "red";
