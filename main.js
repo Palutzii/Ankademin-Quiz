@@ -29,10 +29,15 @@ if (darkMode) {
 
 function correctAnswers() {
   let totalScore = 0;
-  let maxPoints = 13;
+  let checkboxGroup1Score = 0;
+  let checkboxGroup2Score = 0;
+  let checkboxGroup1FailScore = 0;
+  let checkboxGroup2FailScore = 0;
+  let maxPoints = 10;
   let p = document.querySelector("#correctAnswers");
   let allRadioAnswers = document.querySelectorAll(".radio-button");
-  let allCheckboxAnswers = document.querySelectorAll(".checkbox-button");
+  let checkboxGroup1 = document.querySelectorAll(".checkbox-group-1");
+  let checkboxGroup2 = document.querySelectorAll(".checkbox-group-2");
 
   allRadioAnswers.forEach((input) => {
     if (input.checked && input.value === "correct") {
@@ -43,19 +48,53 @@ function correctAnswers() {
     }
   });
 
-  allCheckboxAnswers.forEach((input) => {
+  checkboxGroup1.forEach((input) => {
     if (input.checked && input.value === "correct") {
-      totalScore++;
-      input.parentNode.parentNode.style.background = "darkgreen";
+      checkboxGroup1Score++;
+      console.log("Checkbox 1 Score: " + checkboxGroup1Score);
+      if (checkboxGroup1Score === 3) {
+        totalScore++;
+        input.parentNode.parentNode.style.background = "darkgreen";
+      } else {
+        input.parentNode.parentNode.style.background = "red";
+      }
     } else if (input.checked && input.value !== "correct") {
-      totalScore--;
+      checkboxGroup1FailScore++;
+      console.log("Checkbox 1 Fail Score: " + checkboxGroup1FailScore);
+      input.parentNode.parentNode.style.background = "red";
+    }
+  });
+  checkboxGroup2.forEach((input) => {
+    if (input.checked && input.value === "correct") {
+      checkboxGroup2Score++;
+      console.log("Checkbox 2 Score: " + checkboxGroup2Score);
+      if (checkboxGroup2Score === 2) {
+        totalScore++;
+        input.parentNode.parentNode.style.background = "darkgreen";
+      } else {
+        input.parentNode.parentNode.style.background = "red";
+      }
+    } else if (input.checked && input.value !== "correct") {
+      checkboxGroup2FailScore++;
+      console.log("Checkbox 2 Fail Score: " + checkboxGroup2FailScore);
       input.parentNode.parentNode.style.background = "red";
     }
   });
 
+  if (checkboxGroup1FailScore > 0) {
+    totalScore--;
+  }
+  if (checkboxGroup2FailScore > 0) {
+    totalScore--;
+  }
+
   if (totalScore > maxPoints * 0.75) {
     p.style.color = "green";
-    p.innerText = `You got ${totalScore}/${maxPoints}. You did really really good!`;
+    p.innerText = `You got ${clamp(
+      totalScore,
+      min,
+      max
+    )}/${maxPoints}. You did really really good!`;
   } else if (totalScore > maxPoints * 0.5) {
     p.style.color = "orange";
     p.innerText = `You got ${totalScore}/${maxPoints}. You did alright!`;
@@ -65,7 +104,11 @@ function correctAnswers() {
   }
 
   console.log(totalScore);
-  return totalScore;
+  return clamp(totalScore, min, max);
 }
 
 document.querySelector("#submitBtn").addEventListener("click", correctAnswers);
+
+const min = 0;
+const max = 10;
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
