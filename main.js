@@ -56,12 +56,12 @@ function correctAnswers() {
         totalScore++;
         input.parentNode.parentNode.style.background = "darkgreen";
       } else {
-        input.parentNode.parentNode.style.background = "red";
+        input.parentNode.parentNode.style.background = "darkred";
       }
     } else if (input.checked && input.value !== "correct") {
       checkboxGroup1FailScore++;
       console.log("Checkbox 1 Fail Score: " + checkboxGroup1FailScore);
-      input.parentNode.parentNode.style.background = "red";
+      input.parentNode.parentNode.style.background = "darkred";
     }
   });
   checkboxGroup2.forEach((input) => {
@@ -72,12 +72,12 @@ function correctAnswers() {
         totalScore++;
         input.parentNode.parentNode.style.background = "darkgreen";
       } else {
-        input.parentNode.parentNode.style.background = "red";
+        input.parentNode.parentNode.style.background = "darkred";
       }
     } else if (input.checked && input.value !== "correct") {
       checkboxGroup2FailScore++;
       console.log("Checkbox 2 Fail Score: " + checkboxGroup2FailScore);
-      input.parentNode.parentNode.style.background = "red";
+      input.parentNode.parentNode.style.background = "darkred";
     }
   });
 
@@ -108,7 +108,3 @@ function correctAnswers() {
 }
 
 document.querySelector("#submitBtn").addEventListener("click", correctAnswers);
-
-const min = 0;
-const max = 10;
-const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
