@@ -90,11 +90,7 @@ function correctAnswers() {
 
   if (totalScore > maxPoints * 0.75) {
     p.style.color = "green";
-    p.innerText = `You got ${clamp(
-      totalScore,
-      min,
-      max
-    )}/${maxPoints}. You did really really good!`;
+    p.innerText = `You got ${totalScore}/${maxPoints}. You did really really good!`;
   } else if (totalScore > maxPoints * 0.5) {
     p.style.color = "orange";
     p.innerText = `You got ${totalScore}/${maxPoints}. You did alright!`;
