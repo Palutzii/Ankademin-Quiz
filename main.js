@@ -100,7 +100,7 @@ function correctAnswers() {
   }
 
   console.log(totalScore);
-  return clamp(totalScore, min, max);
+  return totalScore;
 }
 
 document.querySelector("#submitBtn").addEventListener("click", correctAnswers);
